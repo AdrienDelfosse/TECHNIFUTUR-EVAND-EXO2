@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/bloggiesFragment">
+
+    <fragment
+        android:id="@+id/fbFragment"
+        android:name="com.technipixl.technifutur_evand_exo2.FbFragment"
+        android:label="fragment_fb"
+        tools:layout="@layout/fragment_fb" >
+        <action
+            android:id="@+id/action_fbFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twitterFragment"
+        android:name="com.technipixl.technifutur_evand_exo2.TwitterFragment"
+        android:label="fragment_twitter"
+        tools:layout="@layout/fragment_twitter" >
+        <action
+            android:id="@+id/action_twitterFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.technipixl.technifutur_evand_exo2.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_afterLoginFragment"
+            app:destination="@id/afterLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloggiesFragment"
+        android:name="com.technipixl.technifutur_evand_exo2.BloggiesFragment"
+        android:label="fragment_bloggies"
+        tools:layout="@layout/fragment_bloggies" >
+        <action
+            android:id="@+id/action_bloggiesFragment_to_twitterFragment"
+            app:destination="@id/twitterFragment" />
+        <action
+            android:id="@+id/action_bloggiesFragment_to_fbFragment"
+            app:destination="@id/fbFragment" />
+        <action
+            android:id="@+id/action_bloggiesFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterLoginFragment"
+        android:name="com.technipixl.technifutur_evand_exo2.AfterLoginFragment"
+        android:label="fragment_after_login"
+        tools:layout="@layout/fragment_after_login" />
+</navigation>
